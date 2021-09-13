@@ -9,13 +9,13 @@
 </a>
 
 
-<pre>						<b>ciencia de la computacion</b> 
-	 				    <b>Desarrollo basado en plataformas</b>
+<pre>						<b>ciencia de la computacion
+	 				    Desarrollo basado en plataformas</b>
 </pre>
 
 **Integrantes:**
 1. [Alessandro Huayta](https://github.com/alessandrohuaytac)
-2. [Juan Leandro](https://github.com/jjoselblas27)
+2. [Juan Leandro](https://github.com/jjoselblas27) <b>(representante del grupo)</b>
 3. [Sebastian Rejas](https://github.com/SebastianRejas19)
 4. [Anthony Roca](https://github.com/Tony1411)
 
