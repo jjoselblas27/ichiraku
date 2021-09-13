@@ -14,10 +14,15 @@
 </pre>
 
 **Integrantes:**
-1. [Alessandro Huayta](https://github.com/alessandrohuaytac)
-2. [Juan Leandro](https://github.com/jjoselblas27) <b>(representante del grupo)</b>
-3. [Sebastian Rejas](https://github.com/SebastianRejas19)
-4. [Anthony Roca](https://github.com/Tony1411)
+
+Nombre | Usuario github | Correo utec
+------------ | ------------- | ------------- 
+Alessandro Huayta | [alessandrohuaytac](https://github.com/alessandrohuaytac) | alessandro.huayta@utec.edu.pe
+Juan Leandro(RP) | [jjoselblas27](https://github.com/jjoselblas27) | juan.leandro@utec.edu.pe
+Sebastian Rejas | [SebastianRejas19](https://github.com/SebastianRejas19) | 
+Anthony Roca | [Tony1411](https://github.com/Tony1411) | anthony.roca@utec.edu.pe
+
+RP: representante del grupo
 
 ## Resumen del proyecto
 **Tematica del restaurante :** *comida japonesa*
