@@ -19,7 +19,7 @@ Nombre | Usuario github | Correo utec
 ------------ | ------------- | ------------- 
 Alessandro Huayta | [alessandrohuaytac](https://github.com/alessandrohuaytac) | alessandro.huayta@utec.edu.pe
 Juan Leandro(RP) | [jjoselblas27](https://github.com/jjoselblas27) | juan.leandro@utec.edu.pe
-Sebastian Rejas | [SebastianRejas19](https://github.com/SebastianRejas19) | 
+Sebastian Rejas | [SebastianRejas19](https://github.com/SebastianRejas19) | sebastian.rejas@utec.edu.pe
 Anthony Roca | [Tony1411](https://github.com/Tony1411) | anthony.roca@utec.edu.pe
 
 RP: representante del grupo
