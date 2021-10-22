@@ -4,7 +4,7 @@
   <img
     alt="UTEC"
     height="800"
-    width="810"
+    width="820"
     src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Utec-logo.jpg" />
 </a>
 
