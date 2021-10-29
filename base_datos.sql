@@ -22,6 +22,17 @@ CREATE TABLE comentarios(
 	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
 );
 
+CREATE TABLE pedidos_online(
+	id_pedido int NULLPTR AUTO_INCREMENT,
+	plato varchar(200) NOT NULL,
+	distrito enum(“todos los distritos donde tenga cobertura el restaurante”) NOT NULL,
+	dirección varchar(255) NOT NULL,
+	id_user int NOT NULL,
+	PRIMARY KEY(id_pedido)
+	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
+);
+
+
 
 --pruebas--
 INSERT INTO usuarios(id_user, username, password, correo, phone, created_date, modified_date) 
