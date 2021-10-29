@@ -16,8 +16,8 @@ app.post('/login', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
@@ -50,8 +50,8 @@ app.post('/register', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
@@ -83,8 +83,8 @@ app.post('/pedido_online', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
@@ -114,8 +114,8 @@ app.delete('/deleteComentarios', function(req,res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
