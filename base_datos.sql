@@ -23,7 +23,7 @@ CREATE TABLE comentarios(
 );
 
 CREATE TABLE pedidos_online(
-	id_pedido int NULLPTR AUTO_INCREMENT,
+	id_pedido int NOT NULL AUTO_INCREMENT,
 	plato varchar(200) NOT NULL,
 	distrito enum(“todos los distritos donde tenga cobertura el restaurante”) NOT NULL,
 	dirección varchar(255) NOT NULL,
