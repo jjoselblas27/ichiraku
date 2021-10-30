@@ -1,0 +1,14 @@
+<p>comentarios works!</p>
+
+<table>
+    <tr>
+        <th>id_user</th>
+        <th>puntuacion</th>
+        <th>comentario</th>
+    </tr>
+    <tr *ngfor = "let member of coments">
+        <td>{{member.id_user}}</td>
+        <td>{{member.puntuacion}}</td>
+        <td>{{member.comentario}}</td>
+    </tr>
+</table>
