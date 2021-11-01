@@ -18,7 +18,7 @@ app.post('/login', function(req, res){
     host: 'localhost',
     user: 'cliente',
     password: '123456789',
-    database: 'ichiraku'
+    database: 'restaurant'
   });
 
   // Step 1: Establecer la conexion
@@ -52,7 +52,7 @@ app.post('/register', function(req, res){
     host: 'localhost',
     user: 'cliente',
     password: '123456789',
-    database: 'ichiraku'
+    database: 'restaurant'
   });
 
   // Step 1: Establecer la conexion
@@ -83,7 +83,7 @@ app.put('/precio/:price', function(req, res){
     host: 'localhost',
     user: 'cliente',
     password: '123456789',
-    database: 'ichiraku'
+    database: 'restaurant'
   });
 
   // Step 1: Establecer la conexion
@@ -98,7 +98,7 @@ app.post('/pedido_online', function(req, res){
     host: 'localhost',
     user: 'cliente',
     password: '123456789',
-    database: 'ichiraku'
+    database: 'restaurant'
   });
 
   // Step 1: Establecer la conexion
@@ -129,7 +129,7 @@ app.delete('/deleteComentarios', function(req,res){
     host: 'localhost',
     user: 'cliente',
     password: '123456789',
-    database: 'ichiraku'
+    database: 'restaurant'
   });
 
   // Step 1: Establecer la conexion
