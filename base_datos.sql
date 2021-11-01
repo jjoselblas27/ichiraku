@@ -9,32 +9,31 @@ CREATE TABLE usuarios(
 	telefono int,
     created_date DATETIME NOT NULL,
     modified_date DATETIME NOT NULL,
-
     PRIMARY KEY(id_user)
 );
 
-CREATE TABLE menu{
-	id_menu int not null auto_increment;
-	plato varchar(50) not null;
-	price float not null;
-	created_date datetime;
-	modified_date datetime;
-	Primary kEY (id_menu);
-};
+CREATE TABLE menu(
+	id_menu int NOT NULL auto_increment,
+	plato varchar(50) NOT null,
+	price float NOT null,
+	created_date datetime,
+	modified_date datetime,
+	PRIMARY kEY (id_menu)
+);
 
 CREATE TABLE reservaciones (
 	id_reservacion int NOT NULL AUTO_INCREMENT,
 	id_user int NOT NULL,
 	nombre varchar(50) NOT NULL,
 	n_personas int NOT NULL,
-	tipo_mesa ENUM(‘Ventana - Piso1’,’Ventana - Piso2’,’Dentro - Piso1’,’Dentro - Piso2’) NOT NULL,
+	tipo_mesa ENUM('Ventana - Piso1','Ventana - Piso2','Dentro - Piso1','Dentro - Piso2') NOT NULL,
 	hora_reservacion datetime NOT NULL,
 	correo varchar(50),
 	telefono varchar(15),
 	fecha datetime,
 	created_date datetime,
 	modified_date datetime,
-	PRIMARY KEY (id_reservacion)
+	PRIMARY KEY (id_reservacion),
 	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
 );
 
@@ -44,7 +43,7 @@ CREATE TABLE pedidos_online(
 	distrito enum('Callao', 'Comas', 'Carabayllo', 'San martin de Porres', 'Los Olivos') NOT NULL,
 	dirección varchar(255) NOT NULL,
 	id_user int NOT NULL,
-	PRIMARY KEY(id_pedido)
+	PRIMARY KEY(id_pedido),
 	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
 );
 
@@ -55,7 +54,6 @@ CREATE TABLE comentarios(
 	comentario varchar(255),
     modified_date DATETIME NOT NULL,
     created_date DATETIME NOT NULL,
-
 	PRIMARY KEY(id_comentario),
 	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
 );
