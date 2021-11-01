@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 const express = require('express');
 
+
 var app = express();
 
 app.use(express.json());
-
 var cors = require('cors');
 
 app.use(cors());
@@ -62,7 +62,7 @@ app.post('/register', function(req, res){
   var myQuery = " INSERT INTO usuarios (username, password, correo, telefono, modified_date, created_date) " +
                 " VALUES (?, MD5(?), ?, ?, NOW(), NOW()) ";
   
-  var myValues = [ req.body.username, req.body.password, req.body.correo, req.body.telefono ];
+  var myValues = [req.body.username, req.body.password, req.body.correo, req.body.telefono ];
   
   connection.query(myQuery, myValues, function(error, results, fields){
     // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
@@ -137,10 +137,10 @@ app.delete('/deleteComentarios', function(req,res){
 
   // Step 2: Mandar el query
   var myQuery = "DELETE FROM comentarios "+
-                " WHERE id_comentario = ?";
+                " WHERE id_comentario = ? AND id_user = ?";
         
   
-  var myValues = [ req.body.id_comentario];
+  var myValues = [ req.body.id_comentario, req.body.id_user];
   
   connection.query(myQuery, myValues, function(error, results, fields){
     // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
