@@ -9,8 +9,9 @@ export class DataService {
     private http: HttpClient
   ) { }
   
+
   deleteComentario(data: any){
-    //falta completar
-    return this.http.delete<any>('http://localhost:3000/members', data);
+
+    return this.http.delete<any>('http://localhost:3000/deleteComentarios', data);
   }
 }

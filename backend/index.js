@@ -62,7 +62,7 @@ app.post('/register', function(req, res){
   var myQuery = " INSERT INTO usuarios (username, password, correo, telefono, modified_date, created_date) " +
                 " VALUES (?, MD5(?), ?, ?, NOW(), NOW()) ";
   
-  var myValues = [ req.body.username, req.body.password, req.body.correo, req.body.telefono ];
+  var myValues = [req.body.username, req.body.password, req.body.correo, req.body.telefono ];
   
   connection.query(myQuery, myValues, function(error, results, fields){
     // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
