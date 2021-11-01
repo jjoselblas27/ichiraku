@@ -16,8 +16,8 @@ app.post('/login', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
@@ -50,8 +50,8 @@ app.post('/register', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
@@ -76,6 +76,19 @@ app.post('/register', function(req, res){
   });
 });
 
+//Update Precios
+app.put('/precio/:price', function(req, res){
+//Step 0: Definir la conexion a la BD
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'cliente',
+    password: '123456789',
+    database: 'ichiraku'
+  });
+
+  // Step 1: Establecer la conexion
+  connection.connect();
+})
 
 
 //Tabla de Pedidos
@@ -83,8 +96,8 @@ app.post('/pedido_online', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 
@@ -114,8 +127,8 @@ app.delete('/deleteComentarios', function(req,res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'juanjlb',
-    password: 'hajime27',
+    user: 'cliente',
+    password: '123456789',
     database: 'ichiraku'
   });
 

@@ -1,3 +1,6 @@
+CREATE DATABASE restaurant;
+USE restaurant;
+
 CREATE TABLE usuarios(	
     id_user int NOT NULL AUTO_INCREMENT,
 	username varchar(50) NOT NULL,
