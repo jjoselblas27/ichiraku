@@ -198,6 +198,7 @@ app.post('/pedido_online', function(req, res){
   });
 });
 
+
 //DELETE comentarios
 app.delete('/deleteComentarios', function(req,res){
   // Step 0: Definir la conexion a la BD
