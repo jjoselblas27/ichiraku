@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReservacionesNewComponent } from './reservaciones-new/reservaciones-new.component';
+import { ReservacionesDeleteComponent } from './reservaciones-delete/reservaciones-delete.component';
+import { ReservacionesEditComponent } from './reservaciones-edit/reservaciones-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    ReservacionesNewComponent,
+    ReservacionesDeleteComponent,
+    ReservacionesEditComponent
   ],
   imports: [
     BrowserModule,

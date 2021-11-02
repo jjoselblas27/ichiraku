@@ -233,6 +233,104 @@ app.delete('/deleteComentarios', function(req,res){
 })
 
 
+//Registro de nueva reserva
+app.post('/reserva', function(req, res){
+  // Step 0: Definir la conexion a la BD
+  var connection = mysql.createConnection({
+     host: 'localhost',
+     user: 'cliente',
+     password: '123456789',
+     database: 'restaurant'
+ });
+
+ // Step 1: Establecer la conexion
+ connection.connect();
+
+ // ;Step 2: Mandar el query
+ var myQuery =   " INSERT INTO reservaciones (nombre, " +
+                 " n_personas, tipo_mesa, hora_reservacion, fecha, correo," +
+                 " telefono, created_date, modified_date ) " +
+                 " VALUES (?,?,?,?,?,?,?, NOW(), NOW()); ";
+
+ var myValues = [req.body.nombre, req.body.n_personas, req.body.tipo_mesa, req.body.hora_reservacion, req.body.fecha, req.body.correo, req.body.telefono];
+
+ connection.query(myQuery, myValues, function(error, results, fields){
+     // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+     if (error) throw error;
+     
+     // Step 3: Procesar el resultado de la BD
+     res.send(results);
+
+     // Step 4: Cerrar la conexion
+     connection.end();
+ });
+});
+
+
+//DELETE reserva
+app.delete('/reserva/:id_user', function(req,res){
+  // Step 0: Definir la conexion a la BD
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'cliente',
+    password: '123456789',
+    database: 'restaurant'
+  });
+
+  // Step 1: Establecer la conexion
+  connection.connect();
+
+  // Step 2: Mandar el query
+  var myQuery = "DELETE FROM reservaciones "+
+                " WHERE id_reservacion = ? AND id_user = ?";
+        
+  var myValues = [req.body.id_reservacion, req.body.id_user];
+  
+  connection.query(myQuery, myValues, function(error, results, fields){
+    // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+    if (error) throw error;
+    
+    // Step 3: Procesar el resultado de la BD
+    res.send(results);
+
+    // Step 4: Cerrar la conexion
+    connection.end();
+  });
+
+})
+
+
+//DELETE reserva
+app.get('/zonas_reparto', function(req,res){
+  // Step 0: Definir la conexion a la BD
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'cliente',
+    password: '123456789',
+    database: 'restaurant'
+  });
+
+  // Step 1: Establecer la conexion
+  connection.connect();
+
+  // Step 2: Mandar el query
+  var myQuery = " SELECT id_zona, distrito, disponibilidad FROM zonas_reparto; "; 
+        
+    
+  connection.query(myQuery, myValues, function(error, results, fields){
+    // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+    if (error) throw error;
+    
+    // Step 3: Procesar el resultado de la BD
+    res.send(results);
+
+    // Step 4: Cerrar la conexion
+    connection.end();
+  });
+
+})
+
+
 app.listen(3000, function(){
     console.log("server 3000 abierto")
 })

@@ -28,9 +28,9 @@ CREATE TABLE reservaciones (
 	n_personas int NOT NULL,
 	tipo_mesa ENUM('Ventana - Piso1','Ventana - Piso2','Dentro - Piso1','Dentro - Piso2') NOT NULL,
 	hora_reservacion datetime NOT NULL,
-	correo varchar(50),
-	telefono varchar(15),
-	fecha datetime,
+	fecha datetime,	
+	correo varchar(255),
+	telefono int,
 	created_date datetime,
 	modified_date datetime,
 	PRIMARY KEY (id_reservacion),
@@ -59,9 +59,11 @@ CREATE TABLE comentarios(
 );
 
 CREATE TABLE zonas_reparto(
-	id_zona int NOT NULL,
-	distrito varchar(255),
-	disponibilidad bool,
+	id_zona int NOT NULL AUTO_INCREMENT,
+	distrito varchar(255) NOT NULL,
+	disponibilidad ENUM('Si','No') NOT NULL,
+	modified_date DATETIME,
+	created_date DATETIME,
 	PRIMARY KEY(id_zona)
 );
 
@@ -81,3 +83,14 @@ INSERT INTO menu(menu_id, plato, price, created_date, modified_date)
 VALUES(1, "Ramen", 20.00, NOW(), NOW());
 INSERT INTO menu(menu_id, plato, price, created_date, modified_date)
 VALUES(2, "Yakitori", 40.00, NOW(), NOW());
+
+INSERT INTO zonas_reparto(distrito, disponibilidad)
+VALUES ('Callao','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(distrito, disponibilidad)
+VALUES ('Comas','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(distrito, disponibilidad)
+VALUES ('Carabayllo','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(distrito, disponibilidad)
+VALUES ('San Martin de Porres','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(distrito, disponibilidad)
+VALUES ('Los Olivos','No',NOW(),NOW());
