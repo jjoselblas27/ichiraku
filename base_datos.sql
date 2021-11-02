@@ -13,12 +13,12 @@ CREATE TABLE usuarios(
 );
 
 CREATE TABLE menu(
-	id_menu int NOT NULL auto_increment,
+	menu_id int NOT NULL auto_increment,
 	plato varchar(50) NOT null,
 	price float NOT null,
 	created_date datetime,
 	modified_date datetime,
-	PRIMARY kEY (id_menu)
+	PRIMARY kEY (menu_id)
 );
 
 CREATE TABLE reservaciones (
@@ -51,7 +51,7 @@ CREATE TABLE comentarios(
 	id_comentario int NOT NULL AUTO_INCREMENT,
 	id_user int NOT NULL,
 	puntuación int NOT NULL,
-	comentario varchar(255),
+	comentario varchar(5000),
     modified_date DATETIME NOT NULL,
     created_date DATETIME NOT NULL,
 	PRIMARY KEY(id_comentario),
@@ -61,7 +61,8 @@ CREATE TABLE comentarios(
 CREATE TABLE zonas_reparto(
 	id_zona int NOT NULL,
 	distrito varchar(255),
-	disponibilidad bool
+	disponibilidad bool,
+	PRIMARY KEY(id_zona)
 );
 
 
@@ -76,7 +77,7 @@ VALUES (1,1,5,"muy buen restaurante", NOW(), NOW());
 INSERT INTO comentarios(id_comentario, id_user, puntuación, comentario, modified_date, created_date)
 VALUES (2,2,3,"a nada :|", NOW(), NOW());
 
-INSERT INTO menu(id_menu, plato, price, created_date, modified_date)
+INSERT INTO menu(menu_id, plato, price, created_date, modified_date)
 VALUES(1, "Ramen", 20.00, NOW(), NOW());
-INSERT INTO menu(id_menu, plato, price, created_date, modified_date)
+INSERT INTO menu(menu_id, plato, price, created_date, modified_date)
 VALUES(2, "Yakitori", 40.00, NOW(), NOW());
