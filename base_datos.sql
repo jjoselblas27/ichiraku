@@ -80,10 +80,14 @@ VALUES (1,1,5,"muy buen restaurante", NOW(), NOW());
 INSERT INTO comentarios(id_comentario, id_user, puntuación, comentario, modified_date, created_date)
 VALUES (2,2,3,"a nada :|", NOW(), NOW());
 
+insert into menu values(1, 'California Roll', 'Maki', '25', '2019-09-14', '2020-08-15');
+insert into menu values(2, 'Acevichado', 'Maki', '28' , '2020-07-14', '2020-09-15');
+insert into menu values(3, 'Causa Roll ', 'Maki', '25', '2020-09-14', '2021-08-15');
+insert into menu values(4, 'Lomo Saltado Maki ', 'Maki', '20', '2020-09-14', '2021-08-15');
 INSERT INTO menu(plato_id, name_plato, tipo_plato, price, created_date, modified_date)
-VALUES(1, "Ramen", "Sopa", 20.00, NOW(), NOW());
+VALUES(5, "Ramen", "Sopa", 20.00, NOW(), NOW());
 INSERT INTO menu(plato_id, name_plato, tipo_plato, price, created_date, modified_date)
-VALUES(2, "Yakitori","brocheta", 40.00, NOW(), NOW());
+VALUES(6, "Yakitori","brocheta", 40.00, NOW(), NOW());
 
 INSERT INTO zonas_reparto(distrito, disponibilidad)
 VALUES ('Callao','Si',NOW(),NOW());
