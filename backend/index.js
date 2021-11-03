@@ -359,6 +359,87 @@ app.get('/zonas_reparto', function(req,res){
 })
 
 
+// Mostrar todos los platos de la carta con sus precios 
+app.get('/menu', function(req, res){
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'cliente',
+        password: '123456789',
+        database: 'restaurant'
+    });
+
+    connection.connect();
+
+    var myQuery = " SELECT plato_id, name_plato, tipo_plato, price, created_date, modified_date FROM menu WHERE 1 = 1 ";
+    var myValues = [];
+
+    connection.query(myQuery, myValues, function(error, results, fields){
+        // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+        if (error) throw error;
+        
+        // Step 3: Procesar el resultado de la BD
+        res.send(results);
+    
+        // Step 4: Cerrar la conexion
+        connection.end();
+      });
+    });
+
+
+// Actualizar datos de los platos 
+app.put('/menu/:plato_id', function(req, res){
+        // Step 0: Definir la conexion a la BD
+        var connection = mysql.createConnection({
+          host: 'localhost',
+          user: 'cliente',
+          password: '123456789',
+          database: 'restaurant'
+        });
+      
+        // Step 1: Establecer la conexion
+        connection.connect();
+      
+        // Step 2: Mandar el query
+        var myQuery = " UPDATE menu SET modified_date = NOW() ";
+        var myValues = [ ];
+        
+        if (req.body.name_plato){
+          myQuery += " , name_plato = ? ";
+          myValues.push(req.body.name_plato);
+        }
+      
+        if (req.body.tipo_plato){
+          myQuery += " , tipo_plato = ? ";
+          myValues.push(req.body.tipo_plato);
+        }
+      
+        if (req.body.price){
+          myQuery += " , price = ? ";
+          myValues.push(req.body.price);
+        }
+      
+      
+        myQuery += " WHERE plato_id = ? "
+        myValues.push(req.params.plato_id);
+      
+        connection.query(myQuery, myValues, function(error, results, fields){
+          // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+          if (error) throw error;
+          
+          // Step 3: Procesar el resultado de la BD
+          res.send(results);
+      
+          // Step 4: Cerrar la conexion
+          connection.end();
+        });
+      });
+
+
+
+
+
 app.listen(3000, function(){
     console.log("server 3000 abierto")
 })
+
+
