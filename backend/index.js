@@ -129,6 +129,34 @@ connection.connect();
 });
 
 
+// Mostrar Comentarios del Usuario:
+app.get('/comentarios', function(req, res){
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'cliente',
+        password: '123456789',
+        database: 'restaurant'
+    });
+
+    connection.connect();
+
+    var myQuery = " SELECT id_comentario, id_user, puntuación, comentario, modified_date, created_date FROM comentarios WHERE 1 = 1 ";
+    var myValues = [];
+
+    connection.query(myQuery, myValues, function(error, results, fields){
+        // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+        if (error) throw error;
+        
+        // Step 3: Procesar el resultado de la BD
+        res.send(results);
+    
+        // Step 4: Cerrar la conexion
+        connection.end();
+      });
+    });
+
+
+
 //Update Comentario cuando esta logeado
 app.put('/comentarios/:id_comentario', function(req, res){
   //Step 0: Definir la conexion a la BD
