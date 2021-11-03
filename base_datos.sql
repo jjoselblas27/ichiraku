@@ -13,8 +13,9 @@ CREATE TABLE usuarios(
 );
 
 CREATE TABLE menu(
-	menu_id int NOT NULL auto_increment,
-	plato varchar(50) NOT null,
+	plato_id int NOT NULL auto_increment,
+	name_plato varchar(50) NOT null,
+	tipo_plato varchar(50) NOT null,
 	price float NOT null,
 	created_date datetime,
 	modified_date datetime,
@@ -79,10 +80,10 @@ VALUES (1,1,5,"muy buen restaurante", NOW(), NOW());
 INSERT INTO comentarios(id_comentario, id_user, puntuación, comentario, modified_date, created_date)
 VALUES (2,2,3,"a nada :|", NOW(), NOW());
 
-INSERT INTO menu(menu_id, plato, price, created_date, modified_date)
-VALUES(1, "Ramen", 20.00, NOW(), NOW());
-INSERT INTO menu(menu_id, plato, price, created_date, modified_date)
-VALUES(2, "Yakitori", 40.00, NOW(), NOW());
+INSERT INTO menu(plato_id, name_plato, tipo_plato, price, created_date, modified_date)
+VALUES(1, "Ramen", "Sopa", 20.00, NOW(), NOW());
+INSERT INTO menu(plato_id, name_plato, tipo_plato, price, created_date, modified_date)
+VALUES(2, "Yakitori","brocheta", 40.00, NOW(), NOW());
 
 INSERT INTO zonas_reparto(distrito, disponibilidad)
 VALUES ('Callao','Si',NOW(),NOW());
