@@ -9,18 +9,7 @@ import { DataService } from '../_services/data.service';
 })
 export class ComentariosComponent implements OnInit {
 
-  coments = [
-    {
-      id_user: "1",
-      puntuacion: "5",
-      comentario: "muy buen local"
-    },
-    {
-      id_user: "2",
-      puntuacion: "3",
-      comentario: "muy caro :V"
-    }
-  ];
+  comentarios_users: any[] = [];
   
   constructor(
     private DataService: DataService,
@@ -28,7 +17,9 @@ export class ComentariosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //aca iria el get comentarios. para que carge en la pagina principal
+    this.DataService.getComentarios().subscribe( (data) => {
+      this.comentarios_users = data;
+    })
   }
 
   DeleteComment(values: any){
@@ -36,7 +27,7 @@ export class ComentariosComponent implements OnInit {
       response =>{
         console.log(response);
         //Despues de eliminar un comentario me redirigira a la venta con los comentarios
-        this.router.navigate(['/comentarios'])
+        this.router.navigate([''])
       },
       error => {
         console.log(error);

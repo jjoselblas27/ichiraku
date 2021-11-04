@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReservacionesNewComponent } from './reservaciones-new/reservaciones-new.component';
 import { ReservacionesDeleteComponent } from './reservaciones-delete/reservaciones-delete.component';
 import { ReservacionesEditComponent } from './reservaciones-edit/reservaciones-edit.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,15 @@ import { ReservacionesEditComponent } from './reservaciones-edit/reservaciones-e
     ComentariosComponent,
     ReservacionesNewComponent,
     ReservacionesDeleteComponent,
-    ReservacionesEditComponent
+    ReservacionesEditComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

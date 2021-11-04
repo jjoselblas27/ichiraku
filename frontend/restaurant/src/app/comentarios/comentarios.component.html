@@ -5,9 +5,10 @@
     (si puedo implementare un quick sort para implementar los comentarios mas
     valorados)
 
+
 -->
 
-<p>data</p>
+<p>MEJORES COMENTARIOS</p>
 <table>
     <tr>
         <th>id_user</th>
@@ -16,28 +17,13 @@
         <th>delete</th>
         <th>edit</th>
     </tr>
-    <tr>
-        <td>1</td>
-        <td>5</td>
-        <td>muy buen local</td>
+    <tr *ngFor = "let data of comentarios_users">
+        <td>{{data.id_user}} </td>
+        <td>{{data.puntuacion}}  </td>
+        <td>{{data.comentario}} </td>
         <td><button> eliminar </button></td>
         <td><button> editar </button></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>3</td>
-        <td>muy caro :V</td>
-        <td><button> eliminar </button></td>
-        <td><button> editar </button></td>
-    </tr>
+
 </table>
 
-
-<table>
-    <tr>
-        <th>algo</th>
-    </tr>
-    <tr>
-        <td>something</td>
-    </tr>
-</table>

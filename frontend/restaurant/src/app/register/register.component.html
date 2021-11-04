@@ -1,0 +1,26 @@
+<p>register works!</p>
+
+<h3>Register</h3>
+
+<form [formGroup]="registerForm" (ngSubmit)="addUser(registerForm.value)">
+  <div>
+    <label>Username:</label>
+    <input type="text" formControlName="username">
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password">
+  </div>
+  <div>
+    <label>correo:</label>
+    <input type="text" formControlName="correo">
+  </div>
+  <div>
+    <label>telefono:</label>
+    <input type="number" formControlName="telefono">
+  </div>
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
