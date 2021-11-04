@@ -17,6 +17,7 @@ import { RegisterComponent } from './register/register.component';
 
 
 import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component';
+import { MenuTableComponent } from './menu-table/menu-table.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component'
     ReservacionesEditComponent,
     CompraComponent,
     ReclamacionesComponent,
-    RegisterComponent
+    RegisterComponent,
+    MenuTableComponent
   ],
   imports: [
     BrowserModule,
