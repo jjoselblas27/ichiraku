@@ -8,7 +8,8 @@ import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component'
 const routes: Routes = [
   {path: '', component: ComentariosComponent},
   {path:'home/compra', component: CompraComponent},
-  {path:'home/reclamaciones', component: ReclamacionesComponent }
+  {path:'home/reclamaciones', component: ReclamacionesComponent },
+  {path: 'menu/carta', component: MenuTableComponent }
   
 =======
 import { LoginComponent } from './login/login.component';
