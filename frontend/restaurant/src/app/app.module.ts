@@ -16,6 +16,9 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComentarioNewComponent } from './comentario-new/comentario-new.component';
 
+
+import { MenuTableComponent } from './menu-table/menu-table.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ import { ComentarioNewComponent } from './comentario-new/comentario-new.componen
     CompraComponent,
     ReclamacionesComponent,
     RegisterComponent,
-    ComentarioNewComponent
+    ComentarioNewComponent,
+    MenuTableComponent
   ],
   imports: [
     BrowserModule,
