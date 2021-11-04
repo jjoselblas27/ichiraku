@@ -12,7 +12,7 @@ export class ComentariosComponent implements OnInit {
   comentarios_users: any[] = [];
   
   constructor(
-    private DataService: DataService,
+    public DataService: DataService,
     private router: Router
   ) { }
 
@@ -22,12 +22,12 @@ export class ComentariosComponent implements OnInit {
     })
   }
 
-  DeleteComment(values: any){
+  DeleteComentario(values: any){
     this.DataService.deleteComentario(values).subscribe(
       response =>{
         console.log(response);
         //Despues de eliminar un comentario me redirigira a la venta con los comentarios
-        this.router.navigate([''])
+        this.router.navigate(['/login'])
       },
       error => {
         console.log(error);

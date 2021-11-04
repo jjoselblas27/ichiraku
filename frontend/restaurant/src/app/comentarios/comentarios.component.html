@@ -1,29 +1,33 @@
-<p>comentarios works!</p>
-<!--
-    La idea base es usar este componente como pagina de inicio, en ella se
-    mostrara los comentarios junto con lo necesario para la pagina principal
-    (si puedo implementare un quick sort para implementar los comentarios mas
-    valorados)
+
+<h3>MEJORES COMENTARIOS</h3>
 
 
--->
-
-<p>MEJORES COMENTARIOS</p>
-<table>
-    <tr>
-        <th>id_user</th>
-        <th>puntuacion</th>
-        <th>comentario</th>
-        <th>delete</th>
-        <th>edit</th>
-    </tr>
-    <tr *ngFor = "let data of comentarios_users">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">id_user</th>
+        <th scope="col">puntuacion</th>
+        <th scope="col">comentario</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let data of comentarios_users">
+        <th scope="row">{{data.id_comentario}}</th>
         <td>{{data.id_user}} </td>
-        <td>{{data.puntuacion}}  </td>
-        <td>{{data.comentario}} </td>
-        <td><button> eliminar </button></td>
-        <td><button> editar </button></td>
-    </tr>
+        <td>{{data.puntuacion}}</td>
+        <td>{{data.comentario}}</td>
+        <td><button onclick="DeleteComentario([data.id_user, data.id_comentario])"> eliminar </button></td>
+      </tr>
 
-</table>
+    </tbody>
+
+  </table>
+  
+<div *ngIf="DataService.isLoggedIn()">
+    <a routerLink="/comentarios_new"><button>nuevo comentario</button></a>
+</div> 
+
+
 

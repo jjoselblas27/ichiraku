@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./reclamaciones.component.scss']
 })
 export class ReclamacionesComponent implements OnInit {
-  
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -16,7 +16,7 @@ export class ReclamacionesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /*
   private buildForm() {
     this.reclamaciones = new FormGroup({
       name: new FormControl('', [Validators.required]),
@@ -32,6 +32,7 @@ export class ReclamacionesComponent implements OnInit {
       console.log(value);
     });
   }
+  */
 
 }
 

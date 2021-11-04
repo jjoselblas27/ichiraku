@@ -39,6 +39,10 @@ app.post('/login', function(req, res){
     // Step 3: Procesar el resultado de la BD
     res.send(results[0]);
 
+    //pruebas:
+
+
+
     // Step 4: Cerrar la conexion
     connection.end();
   });
@@ -127,6 +131,32 @@ connection.connect();
     connection.end();
   });
 });
+
+app.post('/comentarios_new', function(req,res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'cliente',
+    password: '123456789',
+    database: 'restaurant'
+  });
+  connection.connect();
+
+  var myQuery = "INSERT INTO comentarios(id_user, puntuacion, comentario, modified_date, created_date) "+
+                " VALUES(?, ?, ?, NOW(), NOW() )";
+  var myValues = [req.body.id_user, req.body.puntuacion, req.body.comentario];  
+
+  connection.query(myQuery, myValues, function(error, results, fields){
+    // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
+    if (error) throw error;
+    
+    // Step 3: Procesar el resultado de la BD
+    res.send(results);
+
+    // Step 4: Cerrar la conexion
+    connection.end();
+  });
+
+})
 
 
 // Mostrar Comentarios del Usuario:

@@ -40,13 +40,10 @@ export class DataService {
     }
 
 
-<<<<<<< HEAD
   getMenu(){
     return this.http.get<any>('http://localhost:3000/menu');
   }
 
-=======
->>>>>>> a7aa65ae9692278907ba2d29737e5a84aa97c299
 
   deleteComentario(data: any){
     return this.http.delete<any>('http://localhost:3000/deleteComentarios', data);
@@ -54,5 +51,9 @@ export class DataService {
   getComentarios(){
     return this.http.get<any>('http://localhost:3000/Comentarios')
   }
+  addComentario(coments:any){
+    return this.http.post<any>('http://localhost:3000/Comentarios_new', coments)
+  }
+  
 
 }
