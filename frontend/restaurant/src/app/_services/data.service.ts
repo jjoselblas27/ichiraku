@@ -10,10 +10,6 @@ export class DataService {
   ) { }
   
   
-  getMenu() {
-    return this.http.get<any>('http://localhost:3000/menu');
-  }
-
 
   deleteComentario(data: any){
 
