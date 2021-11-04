@@ -9,6 +9,11 @@ export class DataService {
     private http: HttpClient
   ) { }
   
+  
+  getMenu() {
+    return this.http.get<any>('http://localhost:3000/menu');
+  }
+
 
   deleteComentario(data: any){
 
