@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <!-- idea es despues mejorarlo-->
 <h1>
     <pre>
@@ -36,3 +37,59 @@
         </li>
     </ul>
 <router-outlet></router-outlet>
+=======
+    <!-- 
+        idea puede ser que solo se me muestre los links de compra, reservaciones cuando el usuario este logeado
+    -->
+    <h1>
+      <pre>
+  
+  
+          ICHIRAKU
+          <B>Lo mejor a un buen precio</B>
+  
+  
+  
+      </pre>
+  </h1>
+      
+  <ul>
+      <li>
+          <a routerLink=""> home</a>
+      </li>
+
+      <li>
+          <a routerLink="">Menu</a>
+      </li>
+      <li *ngIf="DataService.isLoggedIn()" >
+          <a routerLink="">compra</a>
+      </li>
+      <li *ngIf="DataService.isLoggedIn()">
+          <a routerLink="">Reservaciones</a>
+      </li>
+      <li>
+          <a routerLink="">Encuentranos</a>
+      </li>
+      <li>
+          <a routerLink="">Politica de servicio</a>
+      </li>
+      <li>
+          <a routerLink="">Libro de reclamaciones</a>
+      </li>
+      <li *ngIf="!DataService.isLoggedIn()">
+          <a routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="!DataService.isLoggedIn()">
+        <a routerLink="/register">register</a>
+      </li>
+  
+      <li *ngIf="DataService.isLoggedIn()">
+        <a href="javascript:void(0);" (click)="logout()">Logout</a>
+      </li>
+  </ul>
+      
+  <router-outlet></router-outlet>
+  
+  
+  
+>>>>>>> a7aa65ae9692278907ba2d29737e5a84aa97c299

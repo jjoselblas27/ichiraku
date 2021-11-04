@@ -37,7 +37,7 @@ app.post('/login', function(req, res){
     if (error) throw error;
     
     // Step 3: Procesar el resultado de la BD
-    res.send(results);
+    res.send(results[0]);
 
     // Step 4: Cerrar la conexion
     connection.end();
@@ -140,7 +140,7 @@ app.get('/comentarios', function(req, res){
 
     connection.connect();
 
-    var myQuery = " SELECT id_comentario, id_user, puntuación, comentario, modified_date, created_date FROM comentarios WHERE 1 = 1 ";
+    var myQuery = " SELECT id_comentario, id_user, puntuacion, comentario, modified_date, created_date FROM comentarios WHERE 1 = 1 ";
     var myValues = [];
 
     connection.query(myQuery, myValues, function(error, results, fields){

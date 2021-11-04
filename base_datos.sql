@@ -51,7 +51,7 @@ CREATE TABLE pedidos_online(
 CREATE TABLE comentarios(
 	id_comentario int NOT NULL AUTO_INCREMENT,
 	id_user int NOT NULL,
-	puntuación int NOT NULL,
+	puntuacion int NOT NULL,
 	comentario varchar(5000),
     modified_date DATETIME NOT NULL,
     created_date DATETIME NOT NULL,
@@ -75,9 +75,9 @@ VALUES (1,'JUAN', MD5('12345'), NULL, NULL, NOW(), NOW());
 INSERT INTO usuarios(id_user, username, password, correo, telefono, created_date, modified_date) 
 VALUES (2,'JOSE', MD5('54321'), NULL, NULL, NOW(), NOW());
 
-INSERT INTO comentarios(id_comentario, id_user, puntuación, comentario, modified_date, created_date)
-VALUES (1,1,5,"muy buen restaurante", NOW(), NOW());
-INSERT INTO comentarios(id_comentario, id_user, puntuación, comentario, modified_date, created_date)
+INSERT INTO comentarios(id_comentario, id_user, puntuacion, comentario, modified_date, created_date)
+VALUES (1,1,5,"maso el restaurante :V", NOW(), NOW());
+INSERT INTO comentarios(id_comentario, id_user, puntuacion, comentario, modified_date, created_date)
 VALUES (2,2,3,"a nada :|", NOW(), NOW());
 
 insert into menu values(1, 'California Roll', 'Maki', '25', '2019-09-14', '2020-08-15');
