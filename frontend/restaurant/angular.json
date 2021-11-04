@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "26f07496-dd7d-497a-a30f-e41c2a3a476f"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-restaurant": {
+    "restaurant": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-restaurant",
+            "outputPath": "dist/restaurant",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-restaurant:build:production"
+              "browserTarget": "restaurant:build:production"
             },
             "development": {
-              "browserTarget": "my-restaurant:build:development"
+              "browserTarget": "restaurant:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-restaurant:build"
+            "browserTarget": "restaurant:build"
           }
         },
         "test": {
@@ -107,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "my-restaurant"
+  "defaultProject": "restaurant"
 }
