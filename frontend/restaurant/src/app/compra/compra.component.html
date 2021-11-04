@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Plato</th>
+    <th>Tipo de plato</th>
+    <th>Precio</th>
+  </tr>
+  <tr *ngFor="let item of menu">
+    <!--<td><a [routerLink]="['/members/view/', item.member_id]">{{item.fullname}}</a></td>-->
+    <td><a>{{item.name_plato}}</a></td>
+    <td>{{item.tipo_plato}}</td>
+    <td>{{item.price}}</td>
+    <!--<td><button [routerLink]="['/members/edit/', item.member_id]">Edit</button></td>-->
+    <!--<td><button (click)="deleteMember(item.member_id)">Delete</button></td>-->
+  </tr>
+</table>

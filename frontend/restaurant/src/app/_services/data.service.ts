@@ -10,9 +10,12 @@ export class DataService {
   ) { }
   
 
-  deleteComentario(data: any){
+  getMenu(){
+    return this.http.get<any>('http://localhost:3000/menu');
+  }
 
+
+  deleteComentario(data: any){
     return this.http.delete<any>('http://localhost:3000/deleteComentarios', data);
   }
 }
-

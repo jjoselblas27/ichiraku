@@ -19,7 +19,7 @@ CREATE TABLE menu(
 	price float NOT null,
 	created_date datetime,
 	modified_date datetime,
-	PRIMARY kEY (menu_id)
+	PRIMARY kEY (plato_id)
 );
 
 CREATE TABLE reservaciones (
@@ -89,13 +89,13 @@ VALUES(5, "Ramen", "Sopa", 20.00, NOW(), NOW());
 INSERT INTO menu(plato_id, name_plato, tipo_plato, price, created_date, modified_date)
 VALUES(6, "Yakitori","brocheta", 40.00, NOW(), NOW());
 
-INSERT INTO zonas_reparto(distrito, disponibilidad)
-VALUES ('Callao','Si',NOW(),NOW());
-INSERT INTO zonas_reparto(distrito, disponibilidad)
-VALUES ('Comas','Si',NOW(),NOW());
-INSERT INTO zonas_reparto(distrito, disponibilidad)
-VALUES ('Carabayllo','Si',NOW(),NOW());
-INSERT INTO zonas_reparto(distrito, disponibilidad)
-VALUES ('San Martin de Porres','Si',NOW(),NOW());
-INSERT INTO zonas_reparto(distrito, disponibilidad)
-VALUES ('Los Olivos','No',NOW(),NOW());
+INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, created_Date)
+VALUES (1,'Callao','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, created_Date)
+VALUES (2,'Comas','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, created_Date)
+VALUES (3, 'Carabayllo','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, created_Date)
+VALUES (4, 'San Martin de Porres','Si',NOW(),NOW());
+INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, created_Date)
+VALUES (5, 'Los Olivos','No',NOW(),NOW());
