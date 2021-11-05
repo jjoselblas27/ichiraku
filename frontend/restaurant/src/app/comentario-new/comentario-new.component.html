@@ -1,0 +1,21 @@
+<p>comentario-new works!</p>
+
+<h3>Nuevo comentario</h3>
+<form [formGroup]="nuevo_comentario" (ngSubmit)="addComentario(nuevo_comentario.value)">
+    <div>
+      <label>Puntuacion:</label>
+      <input type="number" formControlName="puntuacion">
+    </div>
+    <div>
+      <label>comentario:</label>
+      <input type="text" formControlName="comentario">
+    </div>
+
+  
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <div>
+    <button (click) = "goback()">retroceder</button>
+  </div>

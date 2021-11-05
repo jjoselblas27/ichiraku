@@ -5,14 +5,17 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CompraComponent } from './compra/compra.component';
 import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component';
+import { ComentarioNewComponent } from './comentario-new/comentario-new.component';
+import { MenuTableComponent } from './menu-table/menu-table.component';
 
 const routes: Routes = [
   {path: '', component: ComentariosComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path:'home/compra', component: CompraComponent},
-  {path:'home/reclamaciones', component: ReclamacionesComponent}
-  
+  {path: 'home/compra', component: CompraComponent},
+  {path: 'home/reclamaciones', component: ReclamacionesComponent},
+  {path: 'comentarios_new', component: ComentarioNewComponent },
+  {path: 'menu/carta', component: MenuTableComponent }
 ];
 
 @NgModule({

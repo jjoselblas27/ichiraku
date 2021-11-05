@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './login/login.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
@@ -13,10 +11,13 @@ import { ReservacionesNewComponent } from './reservaciones-new/reservaciones-new
 import { ReservacionesDeleteComponent } from './reservaciones-delete/reservaciones-delete.component';
 import { ReservacionesEditComponent } from './reservaciones-edit/reservaciones-edit.component';
 import { CompraComponent } from './compra/compra.component';
-import { RegisterComponent } from './register/register.component';
-
-
 import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComentarioNewComponent } from './comentario-new/comentario-new.component';
+
+
+import { MenuTableComponent } from './menu-table/menu-table.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component'
     ReservacionesEditComponent,
     CompraComponent,
     ReclamacionesComponent,
-    RegisterComponent
+    RegisterComponent,
+    ComentarioNewComponent,
+    MenuTableComponent
   ],
   imports: [
     BrowserModule,

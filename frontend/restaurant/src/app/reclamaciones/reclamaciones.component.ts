@@ -31,16 +31,39 @@ export class ReclamacionesComponent implements OnInit {
     this.DataService.addReclamo(values).subscribe(
       response => {
         console.log(response);
-        this.router.navigate(['']);
       },
       error => {
         console.error(error);
       }
     );
   }
+  showModal(){
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "Si envias el reclamo no podrás borrarlo!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si!, quiero enviarlo'
+    }).then((result) => {
+      if (result.value) {
+        this.router.navigate([""]);
+    }else if(result.dismiss === Swal.DismissReason.cancel){
+        this.router.navigate([""]);
+    }
+  })
+}
 
-
-
+        
 
   private buildForm() {
     this.reclamacionesForm = this.formBuilder.group({
@@ -62,6 +85,7 @@ export class ReclamacionesComponent implements OnInit {
       console.log(value);
     });  
   }
+  
 
 }
 

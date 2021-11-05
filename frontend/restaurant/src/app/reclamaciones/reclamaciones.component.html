@@ -31,14 +31,16 @@
         <input type="text" class="form-control" id="exampleInputdireccion" aria-describedby="direccionpHelp" formControlName="direccion">
     </div>
     
-    <p>
-        Tipo de Documento Identidad: <br/>
-    <select formControlName="tipo_documento">
-        <option value="1">DNI</option>
-        <option value="2">CARNET</option>
-        <option value="3">PASAPORTE</option>
-    </select>
-    </p>
+    <div class="mb-3">
+        <label for="exampleInputdocumentot" class="form-label">Tipo de Documento:</label>
+        <select class="form-select" aria-label="Default select example" formControlName="tipo_documento">
+            <option selected></option>
+            <option value="1">DNI</option>
+            <option value="2">CARNET</option>
+            <option value="3">PASAPORTE</option>
+        </select>
+    </div>
+
     
     <div class="mb-3">
         <label for="exampleInputdocumento" class="form-label">Número Documento Identidad:</label>
@@ -66,6 +68,6 @@
 
     </div>
     
-    <button  type="submit" [disabled]="reclamacionesForm.invalid"  class="btn btn-primary">Guardar</button> 
+    <button (click)="showModal()" type="submit" [disabled]="reclamacionesForm.invalid"  class="btn btn-primary">Guardar</button> 
 </form>
 </div>

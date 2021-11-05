@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -43,15 +42,21 @@ export class DataService {
     return this.http.get<any>('http://localhost:3000/menu');
     }
 
+
+
     addReclamo(reclamo:any){
     return this.http.post<any>('http://localhost:3000/reclamos', reclamo);
     }
     
     deleteComentario(data: any){
     return this.http.delete<any>('http://localhost:3000/deleteComentarios', data);
-    }
-    getComentarios(){
-      return this.http.get<any>('http://localhost:3000/Comentarios')
-    }
+  }
+  getComentarios(){
+    return this.http.get<any>('http://localhost:3000/Comentarios')
+  }
+  addComentario(coments:any){
+    return this.http.post<any>('http://localhost:3000/Comentarios_new', coments)
+  }
+  
 
 }

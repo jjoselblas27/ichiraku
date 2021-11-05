@@ -1,51 +1,53 @@
-<!-- 
+ <!-- 
         idea puede ser que solo se me muestre los links de compra, reservaciones cuando el usuario este logeado
     -->
-    <h1>
-        <pre>
-    
-    
-            ICHIRAKU
-            <B>Lo mejor a un buen precio</B>
-    
-    
-    
-        </pre>
-    </h1>
-        
-    <ul>
-        <li>
-            <a routerLink="/"> home</a>
-        </li>
+    <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a routerLink = "" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a routerLink = "" class="nav-link px-2 link-dark">Menu</a></li>
+          <li  *ngIf="DataService.isLoggedIn()"><a routerLink = "" class="nav-link px-2 link-dark">Reservaciones</a></li>
+          <li  *ngIf="DataService.isLoggedIn()"><a routerLink = "" class="nav-link px-2 link-dark">Compra</a></li>
+          <li><a routerLink = "" class="nav-link px-2 link-dark">About us</a></li>
+        </ul>
+  
+        <div class="col-md-3 text-end">
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+              <li  *ngIf="!DataService.isLoggedIn()">
+                  <a routerLink = "/login"> <button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+              </li>
+              <li *ngIf="!DataService.isLoggedIn()">
+                  <a routerLink = "/register"> <button type="button" class="btn btn-primary">Sign-up</button></a>
+              </li>  
+              <li *ngIf="DataService.isLoggedIn()">
+                <a href="javascript:void(0);" (click)="logout()">Logout</a>
+              </li>
+          </ul>
 
-        <li>
-            <a routerLink="">Menu</a>
-        </li>
-        <li *ngIf="DataService.isLoggedIn()" >
-            <a routerLink="/home/compra">compra</a>
-        </li>
-        <li *ngIf="DataService.isLoggedIn()">
-            <a routerLink="">Reservaciones</a>
-        </li>
-        <li>
-            <a routerLink="">Encuentranos</a>
-        </li>
-        <li>
-            <a routerLink="">Politica de servicio</a>
-        </li>
-        <li>
-            <a routerLink="/home/reclamaciones">Libro de reclamaciones</a>
-        </li>
-        <li *ngIf="!DataService.isLoggedIn()">
-            <a routerLink="/login">Login</a>
-        </li>
-        <li *ngIf="!DataService.isLoggedIn()">
-            <a routerLink="/register">register</a>
-        </li>
+          
+        </div>
+      </header>
+    </div>
 
-        <li *ngIf="DataService.isLoggedIn()">
-            <a href="javascript:void(0);" (click)="logout()">Logout</a>
-        </li>
+
+
+
+    
+<router-outlet></router-outlet>
+
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a routerLink = "" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a routerLink = "" class="nav-link px-2 text-muted">Encuentranos</a></li>
+      <li class="nav-item"><a routerLink = "" class="nav-link px-2 text-muted">Politica de servicio</a></li>
+      <li class="nav-item"><a routerLink = "/home/reclamaciones" class="nav-link px-2 text-muted">Libro de reclamaciones</a></li>
     </ul>
-        
-    <router-outlet></router-outlet>
+    <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+  </footer>
+</div>
