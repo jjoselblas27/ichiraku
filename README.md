@@ -61,7 +61,7 @@ RP: representante del grupo
 | `/login` | `POST /login` | Realizar login | 
 | `/register` | `POST /register` | Crear un nuevo usuario | 
 | `/home/compra` | ` ` | agregar | 
-| `/home/reclamaciones` | `'POST` | muestra al usuario un formulario para mandar su reclamo |
+| `/home/reclamaciones` | `POST recllamos` | muestra al usuario un formulario para mandar su reclamo |
 | `/comentarios_new` | ` POST / Comentarios_new` | agregar un nuevo comentario |
 | `/menu/carta` | `GET / menu` |mostrar los platos que se ofrece | 
 | `/home/zonas_reparto` | `GET / zonas_reparto` | se muestra las zonas de reparto | 
