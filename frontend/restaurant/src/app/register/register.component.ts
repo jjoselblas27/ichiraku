@@ -9,7 +9,8 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-    registerForm: FormGroup;
+
+  registerForm: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,

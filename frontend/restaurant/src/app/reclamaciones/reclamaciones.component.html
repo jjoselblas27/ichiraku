@@ -2,18 +2,70 @@
     <h3 class = "display-4 text-center"><img src="/assets/img/Book.png" width="80" height="80" >Libro de Reclamaciones.</h3>
     <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+        <div class="col-md-10 offset-md-1">
                 
             </div>
         </div>
     </div>
 </div>
 
-<form>
+<div class="container">
+<form [formGroup]="reclamacionesForm" (ngSubmit)="addReclamo(reclamacionesForm.value)" >
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre Completo:</label>
+        <input type="text" class="form-control" id="exampleInputnombre" aria-describedby="nombreHelp" formControlName="nombre">
+    </div>
 
+    <div class="mb-3">
+        <label for="exampleInputapellidop" class="form-label">Apellido Paterno:</label>
+        <input type="text" class="form-control" id="exampleInputapellidop" aria-describedby="apellidopHelp" formControlName="apellido_p">
+    </div>
 
+    <div class="mb-3">
+        <label for="exampleInputapellidom" class="form-label">Apellido Materno:</label>
+        <input type="text" class="form-control" id="exampleInputapellidom" aria-describedby="apellidomHelp" formControlName="apellido_m">
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputdireccion" class="form-label">Dirección:</label>
+        <input type="text" class="form-control" id="exampleInputdireccion" aria-describedby="direccionpHelp" formControlName="direccion">
+    </div>
+    
+    <p>
+        Tipo de Documento Identidad: <br/>
+    <select formControlName="tipo_documento">
+        <option value="1">DNI</option>
+        <option value="2">CARNET</option>
+        <option value="3">PASAPORTE</option>
+    </select>
+    </p>
+    
+    <div class="mb-3">
+        <label for="exampleInputdocumento" class="form-label">Número Documento Identidad:</label>
+        <input type="text" class="form-control" id="exampleInputdocumento" aria-describedby="documentoHelp" formControlName="documento">
+    </div>
 
+    <div class="mb-3">
+        <label for="exampleInputtelefono" class="form-label">Télefono:</label>
+        <input type="text" class="form-control" id="exampleInputtelefono" aria-describedby="telefonoHelp" formControlName="telefono">
+    </div>
 
+    <div class="mb-3">
+        <label for="exampleInputemail" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="exampleInputemail" aria-describedby="emailHelp" formControlName="email">
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputedad" class="form-label">Edad:</label>
+        <input type="text" class="form-control" id="exampleInputedad" aria-describedby="edadHelp" formControlName="edad">
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputreclamo" class="form-label">Reclamo:</label>
+        <input type="text" class="form-control" id="exampleInputreclamo" aria-describedby="reclamoHelp" formControlName="reclamo" size="5">
 
-
+    </div>
+    
+    <button  type="submit" [disabled]="reclamacionesForm.invalid"  class="btn btn-primary">Guardar</button> 
 </form>
+</div>

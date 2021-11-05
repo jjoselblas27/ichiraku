@@ -12,7 +12,7 @@ export class DataService {
     private http: HttpClient
   ) { }
   
-    // LOGIN
+      // LOGIN
     login(loginData: any) {
       return this.http.post<any>('http://localhost:3000/login', loginData).pipe(map(response => {
         this.setCurrentUser(response);
@@ -39,17 +39,19 @@ export class DataService {
       this.id_user = null;
     }
 
-
-  getMenu(){
+    getMenu(){
     return this.http.get<any>('http://localhost:3000/menu');
-  }
+    }
 
-
-  deleteComentario(data: any){
+    addReclamo(reclamo:any){
+    return this.http.post<any>('http://localhost:3000/reclamos', reclamo);
+    }
+    
+    deleteComentario(data: any){
     return this.http.delete<any>('http://localhost:3000/deleteComentarios', data);
-  }
-  getComentarios(){
-    return this.http.get<any>('http://localhost:3000/Comentarios')
-  }
+    }
+    getComentarios(){
+      return this.http.get<any>('http://localhost:3000/Comentarios')
+    }
 
 }

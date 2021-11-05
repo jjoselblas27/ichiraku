@@ -59,6 +59,23 @@ CREATE TABLE comentarios(
 	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
 );
 
+CREATE TABLE reclamos(
+	id_reclamo int NOT NULL AUTO_INCREMENT,
+	nombre varchar(60) NOT NULL,
+	apellido_p varchar(50)	NOT NULL,
+	apellido_m varchar(50) NOT NULL,
+	direccion varchar(150) NOT NULL,
+	tipo_documento enum('DNI','CARNET', 'PASAPORTE') NOT NULL,
+	documento int NOT NULL,
+	telefono int NOT NULL,
+	email varchar(255) NOT NULL,
+	edad int NOT NULL,
+	reclamo varchar(5000) NOT NULL,
+	created_date datetime,
+	modified_date datetime,
+	PRIMARY KEY (id_reclamo)
+);
+
 CREATE TABLE zonas_reparto(
 	id_zona int NOT NULL AUTO_INCREMENT,
 	distrito varchar(255) NOT NULL,
@@ -99,3 +116,7 @@ INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, crea
 VALUES (4, 'San Martin de Porres','Si',NOW(),NOW());
 INSERT INTO zonas_reparto(id_zona, distrito, disponibilidad, modified_Date, created_Date)
 VALUES (5, 'Los Olivos','No',NOW(),NOW());
+
+
+INSERT INTO reclamos (id_reclamo, nombre, apellido_p, apellido_m, direccion, tipo_documento, documento, telefono, email, edad, reclamo, modified_date, created_date) 
+VALUES (1,'ale','a','b','av.are','DNI', 73011282, 972043522,'alessandro@gmail.com',19,'pesimo restaurante :/',NOW(), NOW());

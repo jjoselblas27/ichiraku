@@ -13,6 +13,9 @@ import { ReservacionesNewComponent } from './reservaciones-new/reservaciones-new
 import { ReservacionesDeleteComponent } from './reservaciones-delete/reservaciones-delete.component';
 import { ReservacionesEditComponent } from './reservaciones-edit/reservaciones-edit.component';
 import { CompraComponent } from './compra/compra.component';
+import { RegisterComponent } from './register/register.component';
+
+
 import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component';
 
 @NgModule({
@@ -24,7 +27,8 @@ import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component'
     ReservacionesDeleteComponent,
     ReservacionesEditComponent,
     CompraComponent,
-    ReclamacionesComponent
+    ReclamacionesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
