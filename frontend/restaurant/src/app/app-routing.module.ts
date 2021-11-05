@@ -8,6 +8,7 @@ import { ReclamacionesComponent } from './reclamaciones/reclamaciones.component'
 import { ComentarioNewComponent } from './comentario-new/comentario-new.component';
 import { MenuTableComponent } from './menu-table/menu-table.component';
 import { AboutComponent } from './about/about.component';
+import { ZonasRepartoComponent } from './zonas-reparto/zonas-reparto.component';
 
 const routes: Routes = [
   {path: '', component: ComentariosComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'home/reclamaciones', component: ReclamacionesComponent},
   {path: 'comentarios_new', component: ComentarioNewComponent },
   {path: 'menu/carta', component: MenuTableComponent },
-  {path: 'home/about', component:AboutComponent}
+  {path: 'home/about', component:AboutComponent},
+  {path: 'home/zonas_reparto', component:ZonasRepartoComponent}
 ];
 
 @NgModule({

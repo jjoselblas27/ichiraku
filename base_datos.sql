@@ -35,7 +35,6 @@ CREATE TABLE reservaciones (
 	created_date datetime,
 	modified_date datetime,
 	PRIMARY KEY (id_reservacion),
-	FOREIGN KEY (id_user) REFERENCES usuarios(id_user)
 );
 
 CREATE TABLE pedidos_online(

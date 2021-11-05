@@ -1,0 +1,25 @@
+<div class="container my-3">
+    <h2>Zonas de reparto</h2>
+    <hr>
+  
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id_Zona</th>
+          <th scope="col">Distrito</th>
+          <th scope="col">Disponibilidad</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let item of reparto"> 
+          <td>{{item.id_zona}}</td>
+          <td>{{item.distrito}}</td>
+          <td>{{item.disponibilidad}}</td>    
+        </tr>
+  
+  
+      </tbody>
+    </table>
+  
+  </div>

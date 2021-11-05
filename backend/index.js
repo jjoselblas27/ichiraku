@@ -335,10 +335,10 @@ app.post('/reservaciones-new', function(req, res){
  connection.connect();
 
  // ;Step 2: Mandar el query
- var myQuery =   " INSERT INTO reservaciones (id_user,nombre, " +
+ var myQuery =   " INSERT INTO reservaciones (nombre, " +
                  " n_personas, tipo_mesa, hora_reservacion, fecha, correo," +
                  " telefono, created_date, modified_date ) " +
-                 " VALUES (?,?,?,?,?,?,?,?, NOW(), NOW()); ";
+                 " VALUES (?,?,?,?,?,?,?, NOW(), NOW()); ";
 
  var myValues = [req.body.nombre, req.body.n_personas, req.body.tipo_mesa, req.body.hora_reservacion, req.body.fecha, req.body.correo, req.body.telefono];
 

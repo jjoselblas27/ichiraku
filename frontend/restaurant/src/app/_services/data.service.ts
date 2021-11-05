@@ -58,5 +58,8 @@ export class DataService {
     return this.http.post<any>('http://localhost:3000/Comentarios_new', coments)
   }
   
-
+  getReparto(){
+    return this.http.get<any>('http://localhost:3000/zonas_reparto')
+  }
+  
 }

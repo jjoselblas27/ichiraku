@@ -19,6 +19,7 @@ import { ComentarioNewComponent } from './comentario-new/comentario-new.componen
 
 import { MenuTableComponent } from './menu-table/menu-table.component';
 import { AboutComponent } from './about/about.component';
+import { ZonasRepartoComponent } from './zonas-reparto/zonas-reparto.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AboutComponent } from './about/about.component';
     RegisterComponent,
     ComentarioNewComponent,
     MenuTableComponent,
-    AboutComponent
+    AboutComponent,
+    ZonasRepartoComponent
   ],
   imports: [
     BrowserModule,
