@@ -9,7 +9,6 @@ import { DataService } from '../_services/data.service';
 export class ZonasRepartoComponent implements OnInit {
 
   reparto: any[] = [
-
   ]
 
   constructor(

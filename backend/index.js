@@ -402,8 +402,8 @@ app.get('/zonas_reparto', function(req,res){
   connection.connect();
 
   // Step 2: Mandar el query
-  var myQuery = " SELECT id_zona, distrito, disponibilidad FROM zonas_reparto; "; 
-        
+  var myQuery = " SELECT id_zona, distrito, disponibilidad FROM zonas_reparto WHERE 1 = 1; "; 
+  var myValues = [];      
     
   connection.query(myQuery, myValues, function(error, results, fields){
     // Ya tengo el resultado del query en `results`. Si hay algun error, llegará en `error`
