@@ -57,7 +57,7 @@ RP: representante del grupo
 
 | Angular Route | Backend URLs | Funcionalidad |
 | --- | --- | --- |
-| `/comentarios` | `GET / comentarios` | mostrar la vista principal junto con comentarios de los usuarios |  
+| `/` | `GET / comentarios` | mostrar la vista principal junto con comentarios de los usuarios |  
 | `/login` | `POST /login` | Realizar login | 
 | `/register` | `POST /register` | Crear un nuevo usuario | 
 | `/home/compra` | ` ` | agregar | 
