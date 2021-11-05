@@ -61,5 +61,8 @@ export class DataService {
   getReparto(){
     return this.http.get<any>('http://localhost:3000/zonas_reparto')
   }
-  
+
+  addReserva(reserva:any){
+    return this.http.post<any>('http://localhost:3000/reservaciones_new',reserva)
+  }  
 }

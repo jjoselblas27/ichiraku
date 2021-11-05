@@ -24,17 +24,16 @@ CREATE TABLE menu(
 
 CREATE TABLE reservaciones (
 	id_reservacion int NOT NULL AUTO_INCREMENT,
-	id_user int NOT NULL,
 	nombre varchar(50) NOT NULL,
 	n_personas int NOT NULL,
 	tipo_mesa ENUM('Ventana - Piso1','Ventana - Piso2','Dentro - Piso1','Dentro - Piso2') NOT NULL,
-	hora_reservacion datetime NOT NULL,
+	hora_reservacion time NOT NULL,
 	fecha datetime,	
 	correo varchar(255),
 	telefono int,
 	created_date datetime,
 	modified_date datetime,
-	PRIMARY KEY (id_reservacion),
+	PRIMARY KEY (id_reservacion)
 );
 
 CREATE TABLE pedidos_online(

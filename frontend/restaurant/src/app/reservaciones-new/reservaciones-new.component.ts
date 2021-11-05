@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DataService } from '../_services/data.service';
 
 @Component({
   selector: 'app-reservaciones-new',
@@ -7,9 +10,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservacionesNewComponent implements OnInit {
 
-  constructor() { }
+  reservacionesForm : FormGroup;
+
+  constructor(
+    private FormBuilder : FormBuilder,
+    private DataService : DataService,
+    private Router : Router
+  ) { 
+    this.reservacionesForm = this.FormBuilder.group({
+      nombre: [''],
+      n_personas: [''],
+      tipo_mesa: [''],
+      hora_reservacion: [''],
+      fecha: [''],
+      correo: [''],
+      telefono: ['']      
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  addReserva(values:any){
+    this.DataService.addReserva(values).subscribe(
+      response => {
+        console.log(response);
+        //this.router.navigate(['/home/reservaciones/']);        
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
 }

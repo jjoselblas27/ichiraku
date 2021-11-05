@@ -322,7 +322,7 @@ app.delete('/deleteComentarios', function(req,res){
 
 
 //Registro de nueva reserva
-app.post('/reservaciones-new', function(req, res){
+app.post('/reservaciones_new', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
      host: 'localhost',

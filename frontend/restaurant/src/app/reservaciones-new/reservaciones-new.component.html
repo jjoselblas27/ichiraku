@@ -1,1 +1,48 @@
-<p>reservaciones-new works!</p>
+<div align="center"><img src="/assets/img/Reserva-tu-mesa.png"></div>
+
+<div class="container">
+<form [formGroup]="reservacionesForm" (ngSubmit)="addReserva(reservacionesForm.value)" >
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre Completo:</label>
+        <input type="text" class="form-control" id="exampleInputnombre" aria-describedby="nombreHelp" formControlName="nombre">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputapellidop" class="form-label">Número de personas:</label>
+        <input type="number" class="form-control" id="exampleInputapellidop" aria-describedby="personasHelp" formControlName="n_personas">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputdocumentot" class="form-label">Tipo de Mesa:</label>
+        <select class="form-select" aria-label="Default select example" formControlName="tipo_mesa">
+            <option selected></option>
+            <option value="1">Ventana - Piso1</option>
+            <option value="2">Ventana - Piso2</option>
+            <option value="3">Dentro - Piso1</option>
+            <option value="4">Dentro - Piso2</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputapellidom" class="form-label">Hora de la reservación:</label>
+        <input type="time" class="form-control" id="exampleInputapellidom" aria-describedby="apellidomHelp" formControlName="hora_reservacion">
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputdireccion" class="form-label">Fecha:</label>
+        <input type="date" class="form-control" id="exampleInputdireccion" aria-describedby="direccionpHelp" formControlName="fecha">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputemail" class="form-label">Correo:</label>
+        <input type="email" class="form-control" id="exampleInputemail" aria-describedby="emailHelp" formControlName="correo">
+    </div>  
+    
+    <div class="mb-3">
+        <label for="exampleInputtelefono" class="form-label">Télefono:</label>
+        <input type="text" class="form-control" id="exampleInputtelefono" aria-describedby="telefonoHelp" formControlName="telefono">
+    </div> 
+
+    <button type="submit" class="btn btn-primary">Agregar Reserva</button> 
+</form>
+</div>

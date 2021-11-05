@@ -1,5 +1,5 @@
  <!-- 
-        idea puede ser que solo se me muestre los links de compra, reservaciones cuando el usuario este logeado
+        idea puede ser que solo se me muestre los links de compra cuando el usuario este logeado
     -->
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -11,7 +11,7 @@
           <li><a routerLink = "" class="nav-link px-2 link-secondary">Home</a></li>
           <li><a routerLink = "menu/carta" class="nav-link px-2 link-dark">Menu</a></li>
           <li><a routerLink = "/home/zonas_reparto" class="nav-link px-2 link-dark">Zonas de Reparto</a></li>
-          <li  *ngIf="DataService.isLoggedIn()"><a routerLink = "" class="nav-link px-2 link-dark">Reservaciones</a></li>
+          <li><a routerLink = "/home/reservaciones" class="nav-link px-2 link-dark">Reservaciones</a></li>
           <li  *ngIf="DataService.isLoggedIn()"><a routerLink = "/home/compra" class="nav-link px-2 link-dark">Compra</a></li>
           <li><a routerLink = "/home/about" class="nav-link px-2 link-dark">About us</a></li>
         </ul>
