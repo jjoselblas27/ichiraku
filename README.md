@@ -53,6 +53,15 @@ RP: representante del grupo
 ## Finalidad de la Aplicación Mobile para el proyecto
 *En la aplicación móvil se podrá hacer reservaciones como también pedir la carta y realizar el pedido. Esta generará comandas que llegarán directamente a la cocina. Con respecto al delivery, la app tendrá una opción en donde se pueda ordenar y consultar los precios de los platos.*
 
+# Tema del proyecto
+
+`Restaurante de comida japonesa`
+
+## Motivación
+
+Ante la situacion de pandemia y posterior medidas de prevencion, nues
+
+
 ## Funcionalidades
 
 | Angular Route | Backend URLs | Funcionalidad |
@@ -60,7 +69,7 @@ RP: representante del grupo
 | `/` | `GET / comentarios` | mostrar la vista principal junto con comentarios de los usuarios |  
 | `/login` | `POST /login` | Realizar login | 
 | `/register` | `POST /register` | Crear un nuevo usuario | 
-| `/home/compra` | ` ` | agregar | 
+| `/home/compra` | `GET / menu ` | mostrara el menu | 
 | `/comentarios_new` | ` POST / Comentarios_new` | agregar un nuevo comentario |
 | `/menu/carta` | `GET / menu` |mostrar los platos que se ofrece | 
 | `/home/zonas_reparto` | `GET / zonas_reparto` | se muestra las zonas de reparto | 
