@@ -63,7 +63,7 @@ RP: representante del grupo
 | `/home/compra` | ` ` | agregar | 
 | `/home/reclamaciones` | `` | agregar |
 | `/comentarios_new` | ` POST / Comentarios_new` | agregar un nuevo comentario |
-| `/menu/carta` | `` | agregar | 
+| `/menu/carta` | `GET / menu` | agregar | 
 | `/` | `` | agregar |  
 | `/` | `` | agregar | 
 
