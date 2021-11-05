@@ -64,8 +64,8 @@ RP: representante del grupo
 | `/home/reclamaciones` | `` | agregar |
 | `/comentarios_new` | ` POST / Comentarios_new` | agregar un nuevo comentario |
 | `/menu/carta` | `GET / menu` | agregar | 
-| `/zonas_reparto` | `GET /zonas_reparto` | se muestra las zonas de reparto | 
-| `/reservaciones_new` | `POST / reservaciones_new` | se añade una nueva reservación |  
+| `/home/zonas_reparto` | `GET onas_reparto` | se muestra las zonas de reparto | 
+| `/home/reservaciones` | `POST reservaciones_new` | se añade una nueva reservación |  
 
 ## Instalación
 
