@@ -59,7 +59,7 @@ RP: representante del grupo
 
 ## Motivación
 
-Ante la situacion de pandemia y posterior medidas de prevencion, nues
+Ante la situacion de pandemia y posterior medidas de prevencion, nuestro restaurante se dio cuenta del impacto del internet en el proceso de publicidad. Por ello ichiraku decidio crear si podria pagina web para que los usuarios sepan que menu se ofrecera y como encontrarnos.
 
 
 ## Funcionalidades
