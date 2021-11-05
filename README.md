@@ -52,3 +52,51 @@ RP: representante del grupo
 
 ## Finalidad de la Aplicación Mobile para el proyecto
 *En la aplicación móvil se podrá hacer reservaciones como también pedir la carta y realizar el pedido. Esta generará comandas que llegarán directamente a la cocina. Con respecto al delivery, la app tendrá una opción en donde se pueda ordenar y consultar los precios de los platos.*
+
+## Funcionalidades
+
+| Angular Route | Backend URLs | Funcionalidad |
+| --- | --- | --- |
+| `/comentarios` | `GET / comentarios` | mostrar la vista principal junto con comentarios de los usuarios |  
+| `/login` | `POST /login` | Realizar login | 
+| `/register` | `POST /register` | Crear un nuevo usuario | 
+| `/home/compra` | ` ` | agregar | 
+| `/home/reclamaciones` | `` | agregar |
+| `/comentarios_new` | ` POST / Comentarios_new` | agregar un nuevo comentario |
+| `/menu/carta` | `GET / menu` | agregar | 
+| `/reservaciones_new` | `POST / reservaciones_new` | se añade una nueva reservación |  
+| `/zonas_reparto` | `GET /zonas_reparto` | se muestra las zonas de reparto | 
+
+## Instalación
+
+### Base de datos
+
+1. Abrir MySQL
+2. Ejecutar el script de inicialización de la DB:
+
+`source base_datos.sql`
+
+3. Necesita tener el siguiente usuario:
+
+- Usuario: `cliente`
+- Clave: `123456789`
+
+### Backend
+
+1. Instalar dependencias
+
+`npm install`
+
+2. Iniciar el proyecto
+
+`node index.js`
+
+### Frontend
+
+1. Instalar dependencias
+
+`npm install`
+
+2. Iniciar el proyecto
+
+`ng serve --open`
