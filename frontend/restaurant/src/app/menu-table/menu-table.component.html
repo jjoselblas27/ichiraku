@@ -1,17 +1,29 @@
-<table>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Tipo</th>
-      <th>Price</th>
+<div class="container my-3">
+  <h2>Carta de ICHIRAKU</h2>
+  <hr>
 
-    </tr>
-    <tr *ngFor="let item of menu"> 
-      <td>{{item.plato_id}}</td>
-      <td>{{item.name_plato}}</td>
-      <td>{{item.tipo_plato}}</td>
-      <td>{{item.price}}</td>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of menu"> 
+        <td>{{item.plato_id}}</td>
+        <td>{{item.name_plato}}</td>
+        <td>{{item.tipo_plato}}</td>
+        <td>{{item.price}}</td>
+  
+  
+      </tr>
 
 
-    </tr>
+    </tbody>
   </table>
+
+</div>

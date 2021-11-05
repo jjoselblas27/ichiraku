@@ -322,7 +322,7 @@ app.delete('/deleteComentarios', function(req,res){
 
 
 //Registro de nueva reserva
-app.post('/reserva', function(req, res){
+app.post('/reservaciones-new', function(req, res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({
      host: 'localhost',
@@ -335,10 +335,10 @@ app.post('/reserva', function(req, res){
  connection.connect();
 
  // ;Step 2: Mandar el query
- var myQuery =   " INSERT INTO reservaciones (nombre, " +
+ var myQuery =   " INSERT INTO reservaciones (id_user,nombre, " +
                  " n_personas, tipo_mesa, hora_reservacion, fecha, correo," +
                  " telefono, created_date, modified_date ) " +
-                 " VALUES (?,?,?,?,?,?,?, NOW(), NOW()); ";
+                 " VALUES (?,?,?,?,?,?,?,?, NOW(), NOW()); ";
 
  var myValues = [req.body.nombre, req.body.n_personas, req.body.tipo_mesa, req.body.hora_reservacion, req.body.fecha, req.body.correo, req.body.telefono];
 
@@ -388,7 +388,7 @@ app.delete('/reserva/:id_user', function(req,res){
 })
 
 
-//DELETE reserva
+//Mostrar las zonas de reparto
 app.get('/zonas_reparto', function(req,res){
   // Step 0: Definir la conexion a la BD
   var connection = mysql.createConnection({

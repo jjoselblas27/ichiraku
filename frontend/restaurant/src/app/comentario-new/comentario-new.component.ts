@@ -24,7 +24,7 @@ export class ComentarioNewComponent implements OnInit {
 
     this.nuevo_comentario.controls['id_user'].setValue(DataService.id_user['id_user']);
     //this.countryForm.controls['country'].setValue(this.default, {onlySelf: true});
-   }
+  }
 
   ngOnInit(): void {
   }
